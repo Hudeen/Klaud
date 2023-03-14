@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <title>Klaud</title>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta property="og:description" content="Создание сайтов, блокчейн">
+    <meta property="og:image" content="assets/images/computer.png">
+    <meta property="og:url" content="https://example.com/">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+    <body>
+        <header class="header">
+            <div class="header__wrapper wrapper">
+                <a href="#main" class="header__logo">
+                    <img class="header__logo-img" src="assets/images/logo.svg">
+                </a>
+                <div class="nav-wrapper">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#main" class="nav__link" target="_self">Main</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#services" class="nav__link">Services</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#blockchain" class="nav__link">Blockchain</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#contacts" class="nav__link">Contacts</a>
+                            </li>
+                        </ul>
+
+                        <div class="mobile-menu">
+                            <button class="mobile-menu__icon" id="btn"></button>
+                            <div id="pText" class="mobile-menu-side mobile-menu-hidden">
+                                <nav class="mobile-menu__wrapper">
+                                    <ul class="nav-list-mobile">
+                                        <li class="nav__item">
+                                            <a href="#main" class="nav__link nav_mobile" target="_self">Main</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a href="#services" class="nav__link nav_mobile">Services</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a href="#blockchain" class="nav__link nav_mobile">Blockchain</a>
+                                        </li>
+                                        <li class="nav__item">
+                                            <a href="#contacts" class="nav__link nav_mobile">Contacts</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="main__screen">
+                <div class="company-screen">
+                    <img class="company-screen__logo" src="assets/images/logo.svg">
+                    <h2 class="company-screen__text">Development</h2>
+                    <h2 class="company-screen-text">Company</h2>
+                </div>
+                <div class="picture-screen">
+                    <img class="picture-screen__circle" src="assets/images/circle.svg">
+                    <img class="picture-screen__computer"src="assets/images/computer.png">
+                </div>
+            </div>
+
+            <div class="video__frame">
+                <div style="padding: 56.25% 0 0 0; position: relative;">
+                    <iframe src="https://kinescope.io/202781000?background=1&transparent=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                </div>
+            </div>
+
+            <div class="websites__pack" id="services">
+                <div class="websites__title">
+                    <a class="websites__text">Services</a>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__inner">
+                        <img class="pack-item__picture" src="assets/images/landing.svg">
+                        <div class="pack-item__content">
+                            <h1 class="pack-item__title">Landing page</h1>
+                            <h2 class="pack-item__text">You have a product or service. You want to reflect the advantages in detail, tell about all the nuances on each slide. Visual effects will help to form a positive image.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__inner">
+                        <img class="pack-item__picture" src="assets/images/promo.svg">
+                        <div class="pack-item__content">
+                            <h1 class="pack-item__title">Promo site</h1>
+                            <h2 class="pack-item__text">You have a small list of services that you want to present. You want to present yourself or your business by reflecting the main strengths.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__inner">
+                        <img class="pack-item__picture" src="assets/images/pc.svg">
+                        <div class="pack-item__content">
+                            <h1 class="pack-item__title">Online store</h1>
+                            <h2 class="pack-item__text">For doing business over the Internet. Build a trade, hold promotions and sales. Organize your catalog, filters and selection of products.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__inner">
+                        <img class="pack-item__picture" src="assets/images/exclusive.svg">
+                        <div class="pack-item__content">
+                            <h1 class="pack-item__title">Exclusive website</h1>
+                            <h2 class="pack-item__text">You want to be in the trend of modern ways of communication. Communicate with customers, receive requests, set up information.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__inner">
+                        <img class="pack-item__picture" src="assets/images/bot.svg">
+                        <div class="pack-item__content">
+                            <h1 class="pack-item__title">Telegram bot</h1>
+                            <h2 class="pack-item__text">You want to be in the trend of modern ways of communication. Communicate with customers, receive requests, set up information.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="pack-item">
+                    <div class="pack-item__inner">
+                        <img class="pack-item__picture" src="assets/images/blockchain.svg">
+                        <div class="pack-item__content">
+                            <h1 class="pack-item__title">Blockchain projects</h1>
+                            <h2 class="pack-item__text">We can implement projects of any complexity - from simple smart contracts and decentralized applications to complex Metaverse and DeFi projects.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blockchain" id="blockchain">
+                <div class="blockchain__title">
+                    <a class="blockchain__text">Development of blockchain projects</a>
+                </div>
+                <div class="blockchain-block">
+                    <h1 class="blockchain-block__text">Creation and promotion of NFT collections. Creation of ERC-20 tokens. Development of DeFi/GameFi/SocialFi protocols.</h1>
+                </div>
+                <div class="blockchain__icons">
+                    <div class="icon">
+                        <img class="icon__svg" src="assets/images/crypto-icons/ethereum.svg" style="width: 40px;">
+                        <h1 class="icon__text">Ethereum</h1>
+                    </div>
+                    <div class="icon">
+                        <img class="icon__svg" src="assets/images/crypto-icons/bnb.svg">
+                        <h1 class="icon__text">BNB</h1>
+                    </div>
+                    <div class="icon">
+                        <img class="icon__svg" src="assets/images/crypto-icons/polygon.svg">
+                        <h1 class="icon__text">Polygon</h1>
+                    </div>
+                    <div class="icon">
+                        <img class="icon__svg" src="assets/images/crypto-icons/avalanche.svg">
+                        <h1 class="icon__text">Avalanche</h1>
+                    </div>
+                    <div class="icon">
+                        <img class="icon__svg" src="assets/images/crypto-icons/optimism.svg">
+                        <h1 class="icon__text">Optimism</h1>
+                    </div>
+                    <div class="icon">
+                        <img class="icon__svg" src="assets/images/crypto-icons/arb.svg">
+                        <h1 class="icon__text">Arbitrum</h1>
+                    </div>
+                    <div class="icon">
+                        <img class="icon__svg" src="assets/images/crypto-icons/fantom.svg">
+                        <h1 class="icon__text">Fantom</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stage">
+                <div>
+                    <div class="stage-item">
+                        <div class="stage-item__number">
+                            <h1>01</h1>
+                        </div>
+                            <h1 class="stage-item__title">Consultation</h1>
+                            <h2 class="stage-item__text">We discuss in detail the project concept, design, technical requirements, desired result, references.</h2>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-item__number">
+                            <h1>04</h1>
+                        </div>
+                        <div class="stage-item__content">
+                            <h1 class="stage-item__title">Development</h1>
+                            <h2 class="stage-item__text">We carry out the work in accordance with the agreed technical documentation and work plan.</h2>
+                        </div>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-item__number">
+                            <h1>07</h1>
+                        </div>
+                        <div class="stage-item__content">
+                            <h1 class="stage-item__title">Publication</h1>
+                            <h2 class="stage-item__text">We make the final configuration and integration of the product with the necessary systems. We publish the project online or on separate platforms.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="stage-item">
+                        <div class="stage-item__number">
+                            <h1>02</h1>
+                        </div>
+                        <div class="stage-item__content">
+                            <h1 class="stage-item__title">Evaluation</h1>
+                            <h2 class="stage-item__text">We estimate the complexity, cost, and timing of the project.</h2>
+                        </div>
+                    </div>
+                    <div class="stage-item">
+        
+                        <div class="stage-item__number">
+                            <h1>05</h1>
+                        </div>
+                        <div class="stage-item__content">
+                            <h1 class="stage-item__title">Testing</h1>
+                            <h2 class="stage-item__text">Testing the operation of the product. We check the correctness of the information display. We eliminate possible shortcomings.</h2>
+                        </div>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-item__number">
+                            <h1>08</h1>
+                        </div>
+                        <div class="stage-item__content">
+                            <h1 class="stage-item__title">Escort</h1>
+                            <h2 class="stage-item__text">After the launch of the project, we provide technical support, advise on emerging issues.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="stage-item">
+                        <div class="stage-item__number">
+                            <h1>03</h1>
+                        </div>
+                        <div class="stage-item__content">
+                            <h1 class="stage-item__title">Documentation</h1>
+                            <h2 class="stage-item__text">We prepare, coordinate, sign a full package of documents: contract, NDA, TOR, work plan.</h2>
+                        </div>
+                    </div>
+                    <div class="stage-item">
+                        <div class="stage-item__number">
+                            <h1>06</h1>
+                        </div>
+                        <div class="stage-item__content">
+                            <h1 class="stage-item__title">Agreement</h1>
+                            <h2 class="stage-item__text">We present the project. We give access for self-testing. We are finalizing the product based on your comments.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact" id="contacts">
+                <div class="contact__title">
+                    <h1 class="contact__title-text">Contact us to start<br>a real conversation</h1>
+                </div>
+                <form class="form" action="" method="post" id="form">
+                    <div class="form__container">
+                        <input placeholder=" " class="form__input" id="name" name="name" type="text">
+                        <label class="form__placeholder" for="name">Name</label>
+                        <p id="alert-message-name" class="form__alert-message">Username is required</p>
+                    </div>
+                    <div class="form__container">
+                        <input placeholder=" " class="form__input" id="email" name="email" type="email">
+                        <label class="form__placeholder" for="email">E-mail</label>
+                        <p id="alert-message-email" class="form__alert-message">Email is required</p>
+                        <p id="alert-message-email-second" class="form__alert-message">Incorrect email specified</p>
+                    </div>
+                    <div class="form__container">
+                        <input placeholder=" " class="form__input" id="phone" name="phone" autocomplete="given-name" type="number">
+                        <label class="form__placeholder" for="phone">Phone</label>
+                    </div>
+                    <div class="form__container">
+                        <textarea placeholder=" " id="comment" name="comment" class="form__input"></textarea>
+                        <label class="form__placeholder" for="comment">Comment</label>
+                    </div>
+ 
+                        <button  type="submit" name="submit" class="form__button" role="button">Send</button>
+ 
+                </form>
+            </div>
+        </main>
+
+        <script>
+            btn.onclick = function(){
+                pText.classList.toggle('mobile-menu-hidden');
+            }
+        </script>
+        <script defer src="assets/js/script.js"></script>
+    </body>
+</html>
