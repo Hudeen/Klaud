@@ -69,7 +69,7 @@ body{
 
 .header{
     width: 100%;
-    min-height: 90px;
+    min-height: 75px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -296,8 +296,7 @@ body{
 }
 
 .video__frame{
-    padding: 0 160px 0 160px;
-    margin-top: 160px;
+    padding: 160px 160px 0 160px;
     object-fit: contain;
     background-color: #0e0e0e;
 }
@@ -360,6 +359,12 @@ iframe{
     max-width: 100%;
     min-height: 400px;
     max-height: 400px;
+    transition: 200ms ease all;
+
+}
+
+.pack-item__picture:hover{
+    scale: 1.3;
 }
 
 .pack-item__title{
@@ -494,8 +499,7 @@ iframe{
 }
 
 .contact__title-text{
-    font-size: 60px;
-    line-height: 80px;
+    font-size: 3rem;
 }
 
 .form{
@@ -648,7 +652,7 @@ textarea{
 @media (max-width: 1023px){
 
     .video__frame {
-        padding: 0 100px 0 100px;
+        padding: 100px 100px 0 100px;
     }
 
     .nav__list{
@@ -682,7 +686,32 @@ textarea{
 
 }
 
+
+
+
 @media (max-width: 768px) {
+
+    .main__screen {
+        width: 100%;
+        height: 85vh;
+        display: flex;
+        padding: 100px 50px 0 50px;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .company-screen__logo {
+        width: 100%;
+    }
+
+    .company-screen__text {
+        font-size: 2.5rem;
+    }
+
+     .blockchain__block{
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     .picture-screen__computer{
         width: 60vw;
@@ -690,57 +719,98 @@ textarea{
     }
 
     .picture-screen__circle {
-        width: 25%;
-        left: 56vw;
-        bottom: 26vw;
+        width: 30%;
+        left: 90vw;
+        bottom: 38vw;
+    }
 
+    .video__frame {
+        padding: 50px 50px 0 50px;
+    }
+
+    .websites__pack{
+        padding: 30px;
+    }
+
+    .pack-item {
+        flex-basis: 50%;
+    }
+
+    .pack-item__picture {
+        min-height: 200px;
+    }
+
+    .websites__text{
+        font-size: 50px;
+    }
+
+    .icon__svg {
+        width: 50px;
+    }
+
+    .blockchain__block{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact__title-text{
+        font-size: 2.3em;
+        line-height: 40px;
+    }
 }
 
-.company-screen__logo {
-    width: 90%;
-}
+@media (max-width: 570px){
 
-.company-screen__text {
-    font-size: 4vw;
-}
+    .blockchain__block{
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-.video__frame {
-    padding: 0 50px 0 50px;
+    .picture-screen__computer{
+        width: 80vw;
+        margin-right: 10vw;
+    }
 
-}
+    .picture-screen__circle {
+        left: 76vw;
+        bottom: 34vw;
+    }
 
-.websites__pack{
-    padding: 30px;
-}
+    .company-screen__text {
+        font-size: 1.5rem;
+    }
 
-.pack-item {
-    flex-basis: 50%;
-}
+    .main__text {
+        font-size: 2rem;
 
-.pack-item__picture {
-    min-height: 200px;
-}
+    }
 
-.websites__text{
-    font-size: 50px;
-}
+    .blockchain {
+        padding-bottom: 60px;
+    }
 
+    .contact {
+        padding: 60px;
 
-.icon__svg {
-    width: 50px;
-}
+    }
 
+    .contact__title-text {
+        font-size: 1.9em;
+    }
 
-.contact__title-text{
-    font-size: 40px;
-    line-height: 40px;
-
-}
-
+    .pack-item__inner {
+        max-width: 100%;
+    }
 
 }
 
 @media (max-width: 425px){
+
+    .header__logo {
+        margin: 0 15px 0 0;
+    }
+
+    .form__button::after{
+        display: none;
+    }
 
     .main__screen {
         width: 100%;
@@ -772,7 +842,7 @@ textarea{
     }
 
     .company-screen__text {
-        font-size: 7vw;
+        font-size: 1.6em;
     }
 
     .picture-screen__computer {
@@ -791,7 +861,7 @@ textarea{
         margin-top: 50px;
     }
 
-    
+
     .websites__text {
         font-size: 2rem;
     }
@@ -802,12 +872,110 @@ textarea{
     }
 
     .pack-item__picture {
-        scale: 1.3;
+        scale: 1.2;
     }
 
     .pack-item__text {
         font-size: 1rem;
     }
 
+    .blockchain {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    .contact {
+        padding: 60px;
+    }
+
+    .contact__title-text {
+        font-size: 1.6em;
+        line-height: normal;
+    }
+
+    .form__placeholder {
+        font-size: 1em;
+        left: 25px;
+        top: 25px;
+    }
+
+    .form__input {
+        height: 60px;
+    }
+
+    .form__alert-message {
+        left: 25px;
+        font-size: .8em;
+    }
+
+    textarea {
+        height: 120px !important;
+    }
+
+    .form {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form__button {
+        height: 60px;
+        width: 80%;
+    }
+
+    .form__input:focus ~ .form__placeholder,
+    .form__input:not(:placeholder-shown) ~ .form__placeholder {
+        transform: translateY(-20px) translateX(-5px) scale(0.55);
+    }
+
+    .video__frame {
+        padding: 50px 25px 0 25px;
+    }
     
+}
+
+@media (max-width: 375px){
+    .company-screen__logo {
+        width: 90%;
+    }
+
+    .pack-item__picture {
+        scale: 1.2;
+    }
+
+
+    .contact__title-text {
+        font-size: 1.2em;
+    }
+
+    .main__text {
+        font-size: 1.8em;
+    }
+
+    .second__text {
+        font-size: .9em;
+    }
+    
+    .blockchain {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 320px){
+
+    .contact__title-text {
+        font-size: 1.2em;
+    }
+
+    .main__text {
+        font-size: 1.6em;
+    }
+
+    .second__text {
+        font-size: .7em;
+    }
+
+    .form__button {
+        font: 500 1rem/3 'Montserrat', sans-serif;
+    }
+
 }
