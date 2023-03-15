@@ -63,8 +63,8 @@ body{
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    background: #f7fafc;
     font-family: 'Montserrat', sans-serif;
-    background: #0e0e0e;
 }
 
 .header{
@@ -75,7 +75,6 @@ body{
     position: fixed;
     z-index: 9999;
     top: 0;
-    mix-blend-mode: difference;
 }
 
 .header__wrapper{
@@ -141,8 +140,7 @@ body{
     font-weight: 500;
     margin: 0 15px;
     font-size: 15px;
-    color: #e4e4e4;
-
+    color: #f7fafc;
 }
 
 .nav__link:hover{
@@ -171,7 +169,7 @@ body{
 }
 
 .mobile-menu-side{
-    background: #fff;
+    background: #f7fafc;
     height: 100vh;
     overflow-y: auto;
     position: fixed;
@@ -198,6 +196,10 @@ body{
 
 .mobile-menu-hidden{
     display: none;
+}
+
+.header-hidden{
+    mix-blend-mode: difference;
 }
 
 .mobile-menu{
@@ -230,7 +232,6 @@ body{
     height: 100vh;
     display: flex;
     padding: 100px 50px 0 50px;
-    background-color: #e4e4e4;
 }
 
 .company-screen{
@@ -247,7 +248,6 @@ body{
 }
 
 .company-screen__text{
-    font-family: 'Montserrat', sans-serif;
     font-size: 2vw;
     line-height: 0.9em;
     font-weight: 500;
@@ -299,6 +299,7 @@ body{
     padding: 0 160px 0 160px;
     margin-top: 160px;
     object-fit: contain;
+    background-color: #0e0e0e;
 }
 
 iframe{
@@ -319,7 +320,8 @@ iframe{
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 100px;
+    padding: 50px 100px 100px 100px;
+    background-color: #0e0e0e;
 }
 
 .websites__title{
@@ -330,9 +332,8 @@ iframe{
 }
 
 .websites__text{
-    color: #E4E4E4;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
+    color: #f7fafc;
+    font-size: 3rem;
     margin-left: 3vw;
     font-weight: 600;
 }
@@ -362,7 +363,7 @@ iframe{
 }
 
 .pack-item__title{
-    color: #e4e4e4;
+    color: #f7fafc;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -379,110 +380,109 @@ iframe{
 }
 
 .blockchain{
-    width: 100%;
-    height: auto;
-    background-color: #e4e4e4;
-    padding: 100px;
+    width: var(--chakra-sizes-full);
+    padding-bottom: 120px;
+    padding-top: 120px;
+    max-width: 1280px;
+    -webkit-margin-start: auto;
+    margin-inline-start: auto;
+    -webkit-margin-end: auto;
+    margin-inline-end: auto;
+    -webkit-padding-start: var(--chakra-space-6);
+    padding-inline-start: var(--chakra-space-6);
+    -webkit-padding-end: var(--chakra-space-6);
+    padding-inline-end: var(--chakra-space-6);
+    background-color:#f7fafc;
 }
 
 .blockchain__title{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.blockchain__text{
-    color: #0e0e0e;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-}
-
-.blockchain-block{
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 760px;
+    -webkit-margin-start: auto;
+    margin-inline-start: auto;
+    -webkit-margin-end: auto;
+    margin-inline-end: auto;
     text-align: center;
-    width: 100%;
-    word-break: break-word;
-    max-width: 890px;
+    margin-bottom: 56px;
 }
 
-.blockchain-block__text{
-    color: #5a5a5a;
-    font-size: 25px;
+.main__text{
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.24;
+    font-size: 3rem;
+    margin-bottom: 1em;
+}
+
+.second__text{
+    opacity: 0.7;
+    font-size: 1rem;
     font-weight: 400;
-    word-break: break-word;
 }
 
-.blockchain__icons{
+.blockchain__block{
+    display: grid;
+    grid-gap: 3em;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 60px 0 60px;
+}
+
+.blockchain-item{
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px -3px rgba(34, 60, 80, 0.2);
+    padding: 40px;
+}
+
+.blockchain-item__picture{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-}
-
-.icon{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
-    margin: 100px 20px 0 20px;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    background: #ff7d7d;
 }
 
-.icon__svg{
-    width: 70px;
+.blockchain-item__title{
+    font-size: 1.3em;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
-.icon__text{
-        color: #5a5a5a;
-    font-weight: 500;
-    font-size: 15px;
-    margin-top: 10px;
+.blockchain-item__text{
+    font-size: 1em;
+    opacity: 0.7;
+    color: #575757;
 }
 
-.stage{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-evenly;
-}
 
-.stage-item{
-    width: 300px;
-    height: 200px;
-}
 
-.stage-item__number{
-    width: 55px;
-    height: 55px;
-    border-radius: 10px;
-    background-color: #fd6565;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
 
-.stage-item__title{
-    color: #e4e4e4;
-    font-size: 23px;
-    margin-bottom: 4px;
-}
 
-.stage-item__text{
-    color: #5a5a5a;
-    font-size: 15px;
-    font-weight: 500;
-}
+
+
+
+
+
+
+
 
 .contact{
     width: 100%;
     height: auto;
-    background-color: #e4e4e4;
+    background-color: #f7fafc;
     padding: 100px;
     display: flex;
     flex-direction: column;
@@ -534,7 +534,6 @@ iframe{
     box-sizing: border-box;
     border-radius: 20px;
     padding: 0 32px;
-    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 32px;
@@ -546,7 +545,6 @@ iframe{
 
 .form__placeholder{
     color: #676767;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 32px;
     left: 42px;
@@ -571,6 +569,11 @@ iframe{
     color: #0e0e0e;
 }
 
+textarea{
+    height: 220px !important;
+    padding: 30px 32px !important;
+}
+
 .form__alert-message{
     color: #fd6565;
     font-weight: 600;
@@ -587,7 +590,7 @@ iframe{
     max-width: 100%;
     width: 100%;
     border-radius: 103px;
-    font: 500 2rem/2.2 'Montserrat', sans-serif;
+    font: 500 2rem/3 'Montserrat', sans-serif;
     color: #0e0e0e;
     display: inline-flex;
     align-items: center;
@@ -643,6 +646,11 @@ iframe{
 
 
 @media (max-width: 1023px){
+
+    .video__frame {
+        padding: 0 100px 0 100px;
+    }
+
     .nav__list{
         display: none;
     }
@@ -662,8 +670,144 @@ iframe{
     .header-nav{
         justify-content: flex-end;
     }
+
+    .header__logo{
+        mix-blend-mode: difference;
+        z-index: 9999999999;
+    }
+
+    .pack-item__picture {
+        min-height: 200px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .picture-screen__computer{
+        width: 60vw;
+        margin-right: 10vw;
+    }
+
+    .picture-screen__circle {
+        width: 25%;
+        left: 56vw;
+        bottom: 26vw;
+
+}
+
+.company-screen__logo {
+    width: 90%;
+}
+
+.company-screen__text {
+    font-size: 4vw;
+}
+
+.video__frame {
+    padding: 0 50px 0 50px;
+
+}
+
+.websites__pack{
+    padding: 30px;
+}
+
+.pack-item {
+    flex-basis: 50%;
+}
+
+.pack-item__picture {
+    min-height: 200px;
+}
+
+.websites__text{
+    font-size: 50px;
 }
 
 
+.icon__svg {
+    width: 50px;
+}
 
 
+.contact__title-text{
+    font-size: 40px;
+    line-height: 40px;
+
+}
+
+
+}
+
+@media (max-width: 425px){
+
+    .main__screen {
+        width: 100%;
+        height: 85vh;
+        display: flex;
+        padding: 100px 50px 0 50px;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .picture-screen {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .company-screen {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .company-screen__text {
+        font-size: 7vw;
+    }
+
+    .picture-screen__computer {
+        width: 90vw;
+        margin-right: 20vw;
+    }
+
+    .picture-screen__circle {
+        width: 30%;
+        left: 90vw;
+        bottom: 38vw;
+    }
+
+    .video__frame {
+        padding: 0 25px 0 25px;
+        margin-top: 50px;
+    }
+
+    
+    .websites__text {
+        font-size: 2rem;
+    }
+
+    .pack-item {
+        flex-basis: 100%;
+        margin-top: 50px;
+    }
+
+    .pack-item__picture {
+        scale: 1.3;
+    }
+
+    .pack-item__text {
+        font-size: 1rem;
+    }
+
+    
+}
