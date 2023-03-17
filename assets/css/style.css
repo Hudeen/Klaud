@@ -52,6 +52,7 @@ html{
 
 html, body {
     overflow-x: hidden;
+    
 }
 
 body{
@@ -472,18 +473,6 @@ iframe{
     color: #575757;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .contact{
     width: 100%;
     height: auto;
@@ -638,14 +627,46 @@ textarea{
 
 
 
+.test{
+    display: none;
+    width: 50%;
+    height: 60vw;
+    background-color: #c6ff7d;
+    z-index: 99;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 
+.success{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
 
+.success_image{
+    width: 200px;
+}
 
+.success_text{
+    font-size: 1em;
+    width: 40vw;
+    text-align: center;
+    margin-top: 10px;
+}
 
-
-
-
-
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #45a1ff;
+}
 
 
 
@@ -684,6 +705,19 @@ textarea{
         min-height: 200px;
     }
 
+    .test{
+        width: 70%;
+        height: 60vw;
+    }
+    
+    .success_image{
+        width: 170px;
+    }
+    
+    .success_text{
+        width: 27vw;
+    }
+
 }
 
 
@@ -720,8 +754,8 @@ textarea{
 
     .picture-screen__circle {
         width: 30%;
-        left: 90vw;
-        bottom: 38vw;
+        left: 60vw;
+        bottom: 26vw;
     }
 
     .video__frame {
@@ -755,6 +789,19 @@ textarea{
     .contact__title-text{
         font-size: 2.3em;
         line-height: 40px;
+    }
+
+    .test{
+        width: 80%;
+        height: 90vw;
+    }
+    
+    .success_image{
+        width: 140px;
+    }
+    
+    .success_text{
+        width: 40vw;
     }
 }
 
@@ -798,6 +845,19 @@ textarea{
 
     .pack-item__inner {
         max-width: 100%;
+    }
+
+    .test{
+        width: 80%;
+        height: 90vw;
+    }
+    
+    .success_image{
+        width: 140px;
+    }
+    
+    .success_text{
+        width: 50vw;
     }
 
 }
@@ -931,6 +991,24 @@ textarea{
         padding: 50px 25px 0 25px;
     }
     
+    .form__input {
+        font-size: 15px;
+    }
+
+    .test{
+        width: 90%;
+        height: 90vw;
+    }
+
+    .success_image{
+        width: 120px;
+    }
+
+    .success_text{
+        font-size: .7em;
+        width: 35vw;    
+    }
+
 }
 
 @media (max-width: 375px){
@@ -958,12 +1036,20 @@ textarea{
     .blockchain {
         padding-top: 60px;
     }
+
+    .success_image {
+        width: 100px;
+    }
+
+    .success_text{
+        font-size: .6em;
+    }
 }
 
 @media (max-width: 320px){
 
     .contact__title-text {
-        font-size: 1.2em;
+        font-size: .8em;
     }
 
     .main__text {
@@ -976,6 +1062,23 @@ textarea{
 
     .form__button {
         font: 500 1rem/3 'Montserrat', sans-serif;
+    }
+
+    .success_image {
+        width: 70px;
+    }
+
+    .success_text{
+        font-size: .5em;
+    }
+
+    .blockchain__block {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 10vw 0 10vw;
+    }
+
+    .blockchain-item {
+        padding: 20px;
     }
 
 }

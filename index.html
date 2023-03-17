@@ -7,14 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta property="og:description" content="Создание сайтов, блокчейн">
     <meta property="og:image" content="assets/images/computer.png">
-    <meta property="og:url" content="https://example.com/">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
-
     <body>
         <header id="header__close" class="header header-hidden">
             <div class="header__wrapper wrapper">
@@ -64,7 +59,7 @@
             </div>
         </header>
 
-        <main class="main">
+        <main class="main" id="main">
             <div class="main__screen">
                 <div class="company-screen">
                     <img class="company-screen__logo" src="assets/images/logo.svg">
@@ -188,14 +183,15 @@
                 </div>
             </div>
 
-
-
-
-
-            
             <div class="contact" id="contacts">
                 <div class="contact__title">
                     <h1 class="contact__title-text">Contact us to start<br>a real conversation</h1>
+                </div>
+                <div id="test" class="test">
+                    <div class="success">
+                        <img class="success_image" src="assets/images/succes.svg">
+                        <h1 class="success_text">Thank you, your message has been sent</h1>
+                    </div>
                 </div>
                 <form class="form" action="" method="post" id="form">
                     <div class="form__container">
@@ -204,7 +200,7 @@
                         <p id="alert-message-name" class="form__alert-message">Username is required</p>
                     </div>
                     <div class="form__container">
-                        <input placeholder=" " class="form__input" id="email" name="email" type="email">
+                        <input placeholder=" " class="form__input" id="email" name="email" type="text">
                         <label class="form__placeholder" for="email">E-mail</label>
                         <p id="alert-message-email" class="form__alert-message">Email is required</p>
                         <p id="alert-message-email-second" class="form__alert-message">Incorrect email specified</p>
@@ -217,19 +213,26 @@
                         <textarea placeholder=" " id="comment" name="comment" class="form__input"></textarea>
                         <label class="form__placeholder" for="comment">Comment</label>
                     </div>
- 
-                        <button  type="submit" name="submit" class="form__button" role="button">Send</button>
- 
+
+                        <button onclick="sendHru()" type="submit" name="submit" class="form__button" role="button">Send</button>
                 </form>
             </div>
         </main>
 
-        <script>
-            btn.onclick = function(){
-                menu__open.classList.toggle('mobile-menu-hidden');
-                header__close.classList.toggle('header-hidden');
-            }
-        </script>
+
+        <footer class="footer">
+            <div class="email">
+                <h1>Email:</h1>
+                <p>Vanyauskov2003@gmail.com</p>
+            </div>
+            <div class="phone">
+                <h1>Phone</h1>
+                <p>+43 (664) 998-187-84</p>
+            </div>
+            <p>© 2018 Klaud</p>
+        </footer>
+
+        <script src="assets/js/fetch.js"></script>
         <script defer src="assets/js/script.js"></script>
     </body>
 </html>

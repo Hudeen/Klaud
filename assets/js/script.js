@@ -1,10 +1,13 @@
 const form = document.getElementById('form');
 const username = document.getElementById('name');
 const email = document.getElementById('email');
+const allermessage = document.getElementById('alert-message-email');
+const allermessagesecond = document.getElementById('alert-message-email-second');
+const sucess = document.querySelector('#test');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-
+    
     validateInputs();
 });
 
@@ -19,29 +22,54 @@ const validateInputs = () => {
 
     if(usernameValue === '') {
 
-        document.getElementById('name').style.border = '2px solid #fd6565';
-        document.getElementById('alert-message-name').style.opacity = '1';
+        username.style.border = '2px solid #fd6565';
+        allermessage.style.opacity = '1';
 
     } else {
 
-        document.getElementById('name').style.border = '2px solid #0e0e0e';
-        document.getElementById('alert-message-name').style.opacity = '0';
+        username.style.border = '2px solid #0e0e0e';
+        allermessage.style.opacity = '0';
     }
 
     if(emailValue === '') {
-        document.getElementById('email').style.border = '2px solid #fd6565';
-        document.getElementById('alert-message-email').style.opacity = '1';
+        email.style.border = '2px solid #fd6565';
+        allermessage.style.opacity = '1';
 
     } else if (!isValidEmail(emailValue)) {
 
-        document.getElementById('email').style.border = '2px solid #fd6565';
-        document.getElementById('alert-message-email').style.display = 'none';
-        document.getElementById('alert-message-email-second').style.opacity = '1';
+        email.style.border = '2px solid #fd6565';
+        allermessage.style.display = 'none';
+        allermessagesecond.style.opacity = '1';
 
     } else {
-        document.getElementById('email').style.border = '2px solid #0e0e0e';
-        document.getElementById('alert-message-email-second').style.opacity = '0';
+        email.style.border = '2px solid #0e0e0e';
+        allermessagesecond.style.opacity = '0';
+    }
+
+    const a = isValidEmail(emailValue)
+
+    if (usernameValue !== '') {
+        if (isValidEmail(emailValue)) {
+            sucess.style.display ="block";
+            form.style.display ="none";
+        }
+        
     }
 
 };
 
+
+btn.onclick = function(){
+    menu__open.classList.toggle('mobile-menu-hidden');
+    header__close.classList.toggle('header-hidden');
+}
+
+const g = document.querySelectorAll('.nav_mobile')
+
+g.forEach(element =>{
+    element.addEventListener('click', () => {
+        menu__open.classList.toggle('mobile-menu-hidden');
+    header__close.classList.toggle('header-hidden');
+
+    })
+});
