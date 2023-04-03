@@ -3,6 +3,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 *, ::after, ::before {
@@ -20,6 +21,10 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+br{
+    display: none
 }
 
 ::selection {
@@ -42,17 +47,18 @@ menu, ol, ul{
     list-style: none;
 }
 
-a{
+p, a, h1, h2, h3{
     text-decoration: none;
 }
 
 html{
     height: 100%;
+    overflow-x: hidden;
+    background: #f7fafc;
 }
 
 html, body {
     overflow-x: hidden;
-    
 }
 
 body{
@@ -64,8 +70,28 @@ body{
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    background: #f7fafc;
     font-family: 'Montserrat', sans-serif;
+}
+
+.backgroud_gif{
+
+    opacity: 0.05;
+    background-position: center center;
+    
+    -webkit-text-size-adjust: 100%;
+    border-color: transparent;
+    border-style: solid;
+
+    background-size: auto !important;
+    background-repeat: repeat !important;
+    pointer-events: none;
+
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    z-index: -1;
+
 }
 
 .header{
@@ -135,6 +161,7 @@ body{
     position: relative;
     text-transform: uppercase;
     white-space: nowrap;
+    margin-bottom: 15px;
 }
 
 .nav__link{
@@ -235,6 +262,21 @@ body{
     padding: 100px 50px 0 50px;
 }
 
+.background_logo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.background_logo-image{
+    width: 44vw;
+    left: 7vw;
+    position: absolute;
+    opacity: .03;
+    margin-bottom: 13vw;
+}
+
 .company-screen{
     width: 50%;
     height: 100%;
@@ -244,14 +286,24 @@ body{
     align-items: center;
 }
 
-.company-screen__logo{
-    width: 60%;
+.company-screen__text{
+    font-size: 4vw;
+    font-weight: 600;
 }
 
-.company-screen__text{
-    font-size: 2vw;
-    line-height: 0.9em;
-    font-weight: 500;
+.company-screen__block{
+    width: 17vw;
+    height: 5.5vw;
+    border-radius: 100px;
+    background-color: #0e0e0e;
+    display: flex;
+    justify-content: center;
+}
+
+.company-screen__block-text{
+    color: #f7fafc;
+    font-size: 4vw;
+    font-weight: 600;
 }
 
 .picture-screen{
@@ -267,7 +319,7 @@ body{
     width: 20%;
     position: relative;
     left: 44vw;
-    bottom: 20vw;
+    bottom: 17vw;
     z-index: 10;
     animation: 30s linear 0s normal none infinite running rot;
     -webkit-animation: 30s linear 0s normal none infinite running rot;
@@ -319,7 +371,7 @@ iframe{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     padding: 50px 100px 100px 100px;
     background-color: #0e0e0e;
 }
@@ -358,7 +410,7 @@ iframe{
 .pack-item__picture{
     min-width: 100%;
     max-width: 100%;
-    min-height: 400px;
+    min-height: 300px;
     max-height: 400px;
     transition: 200ms ease all;
 
@@ -398,7 +450,6 @@ iframe{
     padding-inline-start: var(--chakra-space-6);
     -webkit-padding-end: var(--chakra-space-6);
     padding-inline-end: var(--chakra-space-6);
-    background-color:#f7fafc;
 }
 
 .blockchain__title{
@@ -489,6 +540,7 @@ iframe{
 
 .contact__title-text{
     font-size: 3rem;
+    text-align: center;
 }
 
 .form{
@@ -578,7 +630,7 @@ textarea{
 }
 
 .form__button{
-    background-color: #fd6565 !important;
+    background-color: #ff7d7d !important;
     height: 100px;
     max-width: 100%;
     width: 100%;
@@ -602,8 +654,8 @@ textarea{
     width: 100%;
 }
 
-.form__button{
-    background-color: #ff7d7d !important;
+.form__button:hover{
+    background-color: #fd6565 !important;
 }
 
 .form__button::after{
@@ -625,13 +677,11 @@ textarea{
     transform: translateX(0);
 }
 
-
-
 .test{
     display: none;
     width: 50%;
     height: 60vw;
-    background-color: #c6ff7d;
+    background-color: #0e0e0e;
     z-index: 99;
     position: relative;
     top: 0;
@@ -659,15 +709,50 @@ textarea{
     width: 40vw;
     text-align: center;
     margin-top: 10px;
+    color: #ffffff;
 }
 
 .footer{
     display: flex;
     justify-content: center;
-    padding: 5px;
-    background-color: #45a1ff;
+    padding: 30px;
+    background-color: #0e0e0e;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
+.email_block {
+    height: 60px;
+    color: #f7fafc;
+    width: 100%;
+}
+
+.email_text{
+    font-size: 1.3em;
+}
+
+.phone_block  {
+    height: 60px;
+    width: 230px;
+    color: #f7fafc;
+    width: 100%;
+}
+
+.phone_text{
+    font-size: 1.3em;
+}
+
+.copyright{
+    color: #f7fafc;
+    height: 55px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.phone_number{
+    color: #ffffff;
+}
 
 
 @media (max-width: 1023px){
@@ -722,8 +807,12 @@ textarea{
 
 
 
-
 @media (max-width: 768px) {
+
+    .nav_mobile {
+        margin: 0;
+        mix-blend-mode:none;
+    }
 
     .main__screen {
         width: 100%;
@@ -754,8 +843,24 @@ textarea{
 
     .picture-screen__circle {
         width: 30%;
-        left: 60vw;
-        bottom: 26vw;
+        left: 58vw;
+        bottom: 22vw;
+    }
+
+    .company-screen__block{
+        width: 8rem;
+        height: 3rem;
+    }
+
+    .company-screen__block-text{
+        font-size: 2rem;
+        position: relative;
+        top: 0.1rem;
+    }
+
+    .background_logo-image{
+        width: 28rem;
+        left: auto;
     }
 
     .video__frame {
@@ -805,6 +910,8 @@ textarea{
     }
 }
 
+
+
 @media (max-width: 570px){
 
     .blockchain__block{
@@ -818,7 +925,7 @@ textarea{
 
     .picture-screen__circle {
         left: 76vw;
-        bottom: 34vw;
+        bottom: 29vw;
     }
 
     .company-screen__text {
@@ -827,13 +934,21 @@ textarea{
 
     .main__text {
         font-size: 2rem;
-
     }
 
     .blockchain {
         padding-bottom: 60px;
     }
 
+    .pack-item__title{
+        font-size: 15px;
+    }
+
+    .pack-item__text{
+        font-size: 13px;
+        padding: 0 10px 0 0px;
+    }
+    
     .contact {
         padding: 60px;
 
@@ -860,7 +975,25 @@ textarea{
         width: 50vw;
     }
 
+    .company-screen__block-text{
+        font-size: 1.5rem;
+        top:0rem;
+    }
+
+    .company-screen__block{
+        width: 6rem;
+        height: 2rem;
+    }
+
+    .background_logo-image {
+        width: 17rem;
+        left: auto;
+        opacity: .05;
+    }
+
 }
+
+
 
 @media (max-width: 425px){
 
@@ -913,14 +1046,13 @@ textarea{
     .picture-screen__circle {
         width: 30%;
         left: 90vw;
-        bottom: 38vw;
+        bottom: 34vw;
     }
 
     .video__frame {
         padding: 0 25px 0 25px;
         margin-top: 50px;
     }
-
 
     .websites__text {
         font-size: 2rem;
@@ -980,6 +1112,7 @@ textarea{
     .form__button {
         height: 60px;
         width: 80%;
+        font-size: 1.2rem;
     }
 
     .form__input:focus ~ .form__placeholder,
@@ -1009,7 +1142,13 @@ textarea{
         width: 35vw;    
     }
 
+    .background_logo-image {
+        top: 117vw;
+    }
+
 }
+
+
 
 @media (max-width: 375px){
     .company-screen__logo {
@@ -1045,6 +1184,8 @@ textarea{
         font-size: .6em;
     }
 }
+
+
 
 @media (max-width: 320px){
 
