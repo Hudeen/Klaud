@@ -1,3 +1,4 @@
+
 btn.onclick = function () {
     menu__open.classList.toggle('mobile-menu-side--hidden');
     header__close.classList.toggle('header--hidden');
@@ -17,3 +18,4 @@ g.forEach(element => {
         document.body.classList.toggle('overflow-hidden');
     })
 });
+

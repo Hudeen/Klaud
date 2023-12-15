@@ -70,6 +70,23 @@ h3 {
     text-decoration: none;
 }
 
+
+#rect1 {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #rect1.crossed {
+    transform: rotate(45deg);
+  }
+  
+  #rect3 {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #rect3.crossed {
+    transform: rotate(-45deg);
+  }
+
 .overflow-hidden {
     overflow: hidden;
 }
@@ -214,8 +231,7 @@ body {
 .mobile-menu__icon {
     height: 25px;
     width: 36px;
-    background: url("../images/icon-menu.svg") no-repeat center;
-    background-size: 100%;
+    background: transparent;
 }
 
 .mobile-menu-side {
