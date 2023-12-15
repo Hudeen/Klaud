@@ -643,7 +643,7 @@ iframe {
     .pack-item__picture {
         min-height: 200px;
     }
-    
+
     .blockchain-item {
         padding: 25px;
     }
@@ -783,10 +783,6 @@ iframe {
         padding: 0 10px 0 0px;
     }
 
-    .pack-item__inner {
-        max-width: 100%;
-    }
-
     .company-screen__block-text {
         font-size: 1.5rem;
         top: 0rem;
@@ -816,7 +812,6 @@ iframe {
     .header__logo {
         margin: 0 15px 0 0;
     }
-
 
     .main__screen {
         width: 100%;
@@ -881,6 +876,10 @@ iframe {
 
     .pack-item__text {
         font-size: 1rem;
+    }
+
+    .bot {
+        scale: 1;
     }
 
     .blockchain {
