@@ -903,7 +903,8 @@ iframe {
     }
 
     .bot {
-        scale: 1;
+        min-height: 180px;
+        margin-bottom: 50px;
     }
 
     .blockchain {
