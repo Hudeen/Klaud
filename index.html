@@ -18,7 +18,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
-    <script async src="./assets/js/animations.js"></script>
 
 </head>
 
@@ -51,11 +50,9 @@
 
                     <div class="mobile-menu">
                         <button class="mobile-menu__icon" id="btn">
-                            <svg width="36" height="25" viewBox="0 0 826 586" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect id="rect1" width="826" height="104" rx="52" fill="#0E0E0E"/>
-                                <rect id="rect2" y="241" width="826" height="104" rx="52" fill="#0E0E0E"/>
-                                <rect id="rect3" y="482" width="826" height="104" rx="52" fill="#0E0E0E"/>
-                            </svg>
+                            <span class="mobile-menu__icon_line top"></span>
+                            <span class="mobile-menu__icon_line mid"></span>
+                            <span class="mobile-menu__icon_line botm"></span>
                         </button>
                         <div id="menu__open" class="mobile-menu-side mobile-menu-side--hidden">
                             <nav class="mobile-menu__wrapper">
@@ -81,34 +78,63 @@
         </div>
     </header>
 
-    <div class="main__screen" id="container">
-        <div class="main__screen-wrapper">
-            <div class="company-screen">
-                <h2 class="company-screen__text">Разрабатываем <div class="company-screen__block">
-                        <h1 class="company-screen__block-text">сайты</h1>
-                    </div>для людей.</h2>
-                <img class="background_logo-image" src="assets/images/logo_second.svg" />
-            </div>
-            <div class="picture-screen">
-                <img class="picture-screen__computer" src="assets/images/computer.png">
-            </div>
-        </div>
-        <div class="circle__block">
-            <img class="circle" src="assets/images/circle_black.svg" style="width: 200px;">
-        </div>
-    </div>
 
     <main class="main" id="main">
-
-        <div>
-            <div class="video__frame">
-                <div style="padding: 46.25% 0 0 0; position: relative;">
-                    <iframe src="https://kinescope.io/203350337?background=1&transparent=1&" frameborder="0"
-                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                    </iframe>
+        <div class="main__screen" id="container">
+            <div class="main__screen-wrapper">
+                <div class="company-screen">
+                    <h2 class="company-screen__text">Разрабатываем <div class="company-screen__block">
+                            <h1 class="company-screen__block-text">сайты</h1>
+                        </div>для людей.</h2>
+                    <img class="background_logo-image" src="assets/images/logo_second.svg" />
+                </div>
+                <div class="picture-screen">
+                    <img class="picture-screen__computer" src="assets/images/computer.png">
                 </div>
             </div>
+            <div class="circle__block">
+                <img class="circle" src="assets/images/circle_black.svg" style="width: 200px;">
+            </div>
+        </div>
+        <div>
+
+            <!-- “Style” in html is needed to optimize the video on the page;
+            without it, the video fragment will lag -->
+
+            <style>
+                .video__wrapper {
+                    background: #0e0e0e;
+                    padding: 50px 50px 0 50px;
+                }
+                .video__frame {
+                    position: relative;
+                    padding: 46.25% 0 0 0;
+                }
+
+                .video__frame iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                /* Media query for smartphones */
+                @media (max-width: 767px) {
+                    .video__frame {
+                        padding-top: 56.25%;
+                        /* Adjust the padding for smartphones */
+                    }
+                }
+            </style>
+
+            <div class="video__wrapper">
+                <div class="video__frame">
+                    <iframe src="https://kinescope.io/203350337?background=1&transparent=1&" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+            </div>
+
 
             <div class="websites__pack" id="services">
                 <div class="websites__title">
@@ -147,7 +173,8 @@
                 </div>
                 <div class="pack-item">
                     <div class="pack-item__inner">
-                        <img style="height: 180px !important;" class="pack-item__picture bot" src="assets/images/services-icons/bot.svg">
+                        <img class="pack-item__picture"
+                            src="assets/images/services-icons/bot.svg">
                         <div class="pack-item__content">
                             <h1 class="pack-item__title">Телеграм бот</h1>
                             <h2 class="pack-item__text">Подойдет если вам нужен телеграм бот для разных задач.</h2>
@@ -279,7 +306,7 @@
             <a class="phone_number">https://t.me/Hudeeen</a>
         </div>
     </footer>
-    <script async src="./assets/js/animations.js"></script>
+    <script src="./assets/js/animations.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

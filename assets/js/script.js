@@ -19,3 +19,15 @@ g.forEach(element => {
     })
 });
 
+
+	/* Click Menu Button */	
+    document.querySelector('#btn').addEventListener('click', function() {
+        var menuButton = document.querySelector('#btn');
+        if (!menuButton.classList.contains('on_menu')) {
+            menuButton.classList.add('on_menu');
+        } else {
+            menuButton.classList.remove('on_menu');
+        }
+        return false;
+    });
+
