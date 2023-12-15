@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 2 });
 
 const tl = gsap.timeline();
-tl.from(".main__screen", { translateY: isMobile ? "-10%" : "-30%", duration: 1 });
+tl.from(".main__screen", { translateY: isMobile ? "-30%" : "-30%", duration: 1 });
 
 ScrollTrigger.create({
     animation: tl,
