@@ -809,6 +809,10 @@ iframe {
 
 @media (max-width: 425px) {
 
+    .header {
+        min-height: 85px;
+    }
+
     .header__logo {
         margin: 0 15px 0 0;
     }
@@ -908,6 +912,7 @@ iframe {
 
 
 @media (max-width: 375px) {
+    
     .company-screen__logo {
         width: 90%;
     }
